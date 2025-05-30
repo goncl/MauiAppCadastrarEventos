@@ -4,62 +4,93 @@
              x:Class="MauiAppCadastrarEventos.Views.EventoCadastrado"
              Title="EventoCadastrado"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Gray100}">
+             BackgroundColor="Black">
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15" Margin="0,30,0,0">
+        <VerticalStackLayout Padding="10,20,10,10" Spacing="15" >
             <Label 
                 Text="{Binding EventoSelecionado.NomeEvento}"
                 FontSize="23"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
-                Margin="0,0,0,20" />
+                Margin="0,0,0,10"
+                TextColor="White" />
 
-            <Frame Margin="0,0,0,20">
+            <Frame BackgroundColor="MidnightBlue" Padding="20,30,20,30" >
                 <Grid ColumnDefinitions="*, *, *"
                       RowDefinitions="Auto, Auto">
-                    <Label Grid.Row="0" Grid.Column="0" Text="Inicio" HorizontalOptions="Center" />
-                    <Label Grid.Row="0" Grid.Column="1" Text="Termino" HorizontalOptions="Center" />
-                    <Label Grid.Row="0" Grid.Column="2" Text="Duração" HorizontalOptions="Center" />
+                    <Label Grid.Row="0" 
+                           Grid.Column="0" 
+                           Text="Inicio" 
+                           TextColor="White"
+                           HorizontalOptions="Center" />
+                    <Label Grid.Row="0" 
+                           Grid.Column="1" 
+                           Text="Termino" 
+                           TextColor="White"
+                           HorizontalOptions="Center" />
+                    <Label Grid.Row="0" 
+                           Grid.Column="2" 
+                           Text="Duração" 
+                           TextColor="White"
+                           HorizontalOptions="Center" />
 
                     <Label Grid.Row="1" Grid.Column="0" 
                            Text="{Binding DataInicio, StringFormat='{}{0:dd/MM/yyyy}'}" 
+                           TextColor="White"
                            HorizontalOptions="Center" />
                     <Label Grid.Row="1" Grid.Column="1" 
                            Text="{Binding DataTermino,  StringFormat='{}{0:dd/MM/yyyy}'}" 
+                           TextColor="White"
                            HorizontalOptions="Center" />
                     <HorizontalStackLayout Grid.Row="1" 
                                            Grid.Column="2" 
                                            HorizontalOptions="Center">
-                        <Label Text="{Binding Duracao}" />
-                        <Label Text=" Dias" />
+                        <Label Text="{Binding Duracao}" TextColor="White" />
+                        <Label Text=" Dias" TextColor="White" />
                     </HorizontalStackLayout>
                 </Grid>
             </Frame>
 
-            <Frame Margin="0,0,0,20">
+            <Frame BackgroundColor="MidnightBlue" Padding="20,30,0,30" >
                 <HorizontalStackLayout>
-                    <Label Text="Número de participantes:" Padding="0,0,10,0" />
-                    <Label Text="{Binding QtdParticipantes}" />
+                    <Label Text="Número de participantes:"
+                           TextColor="White"
+                           Padding="0,0,10,0" />
+                    <Label Text="{Binding QtdParticipantes}" TextColor="White" />
                 </HorizontalStackLayout>
             </Frame>
 
-            <Frame Margin="0,0,0,20">
+            <Frame BackgroundColor="MidnightBlue" Padding="20,30,0,30" >
                 <HorizontalStackLayout>
-                    <Label Text="Local:" Padding="0,0,10,0" />
-                    <Label Text="{Binding LocalEvento}" />
+                    <Label Text="Local:"
+                           TextColor="White"
+                           Padding="0,0,10,0" />
+                    <Label Text="{Binding LocalEvento}" TextColor="White" />
                 </HorizontalStackLayout>
             </Frame>
 
-            <Frame Margin="0,0,0,20">
+            <Frame BackgroundColor="MidnightBlue" Padding="20,30,10,30" >
                 <HorizontalStackLayout>
-                    <Label Text="Valor Total:" Padding="0,0,10,0" />
-                    <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" />
+                    <Label Text="Custo por Participante:"
+                           TextColor="White"
+                           Padding="0,0,10,0" />
+                    <Label Text="{Binding ValorParticipante, StringFormat='{}{0:c}'}" TextColor="White" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="MidnightBlue" Padding="20,30,10,30" >
+                <HorizontalStackLayout>
+                    <Label Text="Valor Total:"
+                           TextColor="White"
+                           Padding="0,0,10,0" />
+                    <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" TextColor="White" />
                 </HorizontalStackLayout>
             </Frame>
 
             <Button Text="Voltar" 
                     x:Name="btn_voltar" 
-                    BackgroundColor="#007BFF"
+                    TextColor="White"
+                    BackgroundColor="Blue"
                     Clicked="Btn_voltar_Clicked" 
                     HorizontalOptions="Center" />
 

@@ -14,7 +14,7 @@ namespace MauiAppCadastrarEventos.Models
 
         public string LocalEvento { get; set; }
 
-        public double ValorParticipnate { get; set; }
+        public double ValorParticipante { get; set; }
 
         public int Duracao 
         { 
@@ -25,7 +25,7 @@ namespace MauiAppCadastrarEventos.Models
         {
             get
             {
-                double total = QtdParticipantes * ValorParticipnate * Duracao;
+                double total = QtdParticipantes * ValorParticipante * Duracao;
                 return total;
             }
         }

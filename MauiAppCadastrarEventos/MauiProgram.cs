@@ -13,6 +13,9 @@ namespace MauiAppCadastrarEventos
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Lato-Bold.ttf", "LatoBold");
+                    fonts.AddFont("Lato-Light.ttf", "LatoLight");
+                    fonts.AddFont("Lato-Regular.ttf", "Lato");
                 });
 
 #if DEBUG

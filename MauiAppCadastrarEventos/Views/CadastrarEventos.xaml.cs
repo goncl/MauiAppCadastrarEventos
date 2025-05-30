@@ -38,8 +38,12 @@ public partial class CadastrarEventos : ContentPage
         {
             int qtdParticipantes = (int)stp_participantes.Value;
 
-            // Tenta converter o texto para double, aceitando vírgula ou ponto
-            string valorTexto = custoParticipanteEntry.Text.Replace(",", ".");
+            // Verifica se o campo está vazio ou nulo, e define 0.00 como padrão
+            string valorTexto = string.IsNullOrWhiteSpace(custoParticipanteEntry.Text)
+                                ? "0.00"
+                                : custoParticipanteEntry.Text.Replace(",", ".");
+
+            // Tenta converter
             double valorParticipante = double.Parse(valorTexto);
 
             Cadastro c = new Cadastro
@@ -49,7 +53,7 @@ public partial class CadastrarEventos : ContentPage
                 DataTermino = dtpck_Termino.Date,
                 QtdParticipantes = qtdParticipantes,
                 LocalEvento = (string)pck_local_evento.SelectedItem,
-                ValorParticipnate = valorParticipante,
+                ValorParticipante = valorParticipante,
             };
 
             await Navigation.PushAsync(new EventoCadastrado()
