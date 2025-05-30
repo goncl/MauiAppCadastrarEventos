@@ -35,14 +35,17 @@
                         <DatePicker x:Name="dtpck_Inicio"
                                     DateSelected="dtpck_Inicio_DateSelected"
                                     Format="dd/MM/yyyy"
-                                    TextColor="White" />
+                                    BackgroundColor="White"
+                                    Margin="20,0,0,0"/>
                     </HorizontalStackLayout>
 
                     <HorizontalStackLayout>
                         <Label Text="Data de Término" TextColor="White" />
                         <DatePicker x:Name="dtpck_Termino"
                                      Format="dd/MM/yyyy"
-                                    TextColor="White" />
+                                    BackgroundColor="White"
+                                    Margin="20,0,0,0" />
+                        
                     </HorizontalStackLayout>
 
                 </VerticalStackLayout>
@@ -66,6 +69,7 @@
 
                         <Stepper Grid.Row="0" Grid.Column="2"
                                  x:Name="stp_participantes"
+                                 BackgroundColor="White"
                                  Minimum="5"
                                  Maximum="100"
                                  Increment="5"
@@ -94,7 +98,7 @@
                     <Entry x:Name="custoParticipanteEntry"
                            Keyboard="Numeric"
                            Placeholder="Ex: 20,00"
-                           TextColor="White" />
+                           BackgroundColor="White" />
                 </VerticalStackLayout>
             </Frame>
 
